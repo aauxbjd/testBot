@@ -5,7 +5,7 @@ const cors = require('cors')
 
 const app = express();
 app.use(express.json()); // Add this line to parse JSON request bodies
-app.use(cors());
+app.use(cors({origin:'http://3.16.138.217:3000'}));
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
 });
