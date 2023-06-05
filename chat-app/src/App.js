@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+const base_url = 'http://3.16.138.217:5000'
 
 function App() {
   const [prompt, setPrompt] = useState('');
@@ -13,7 +14,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const apiResponse = await fetch('http://localhost:5000/api/chat1', {
+      const apiResponse = await fetch(`${base_url}/api/chat1`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
